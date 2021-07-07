@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { useEffect } from 'react';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -17,6 +18,10 @@ export default function Home() {
 			<main className={styles.main}>
 				<h1>Coming Soon!</h1>
 				<p>Thank you for showing interest in the Now Live project!</p>
+				<p id='NowLiveExtensionInstalledOrNotText'>
+					In the meantime, install the extension from{' '}
+					<a>here (not yet released)</a>
+				</p>
 			</main>
 
 			<footer className={styles.footer}>
