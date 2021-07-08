@@ -15,9 +15,8 @@ export default function Home() {
 
 			<main className={styles.main}>
 				<h1>Coming Soon!</h1>
-				<p>Thank you for showing interest in the Now Live project!</p>
 				<p id='NowLiveExtensionInstalledOrNotText'>
-					In the meantime, install the extension from{' '}
+					In the meantime, you can install the extension from{' '}
 					<a>here (not yet released)</a>
 				</p>
 			</main>
