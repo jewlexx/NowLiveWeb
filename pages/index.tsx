@@ -103,8 +103,8 @@ export default function Home() {
 			<footer className={styles.footer}>
 				<Image
 					src='/models/icon/iconRender.png'
-					height='20em'
-					width='20em'
+					height='50px'
+					width='50px'
 					alt='Now Live Icon'
 				/>
 				<p>
