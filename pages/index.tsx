@@ -102,7 +102,7 @@ export default function Home() {
 
 			<footer className={styles.footer}>
 				<Image
-					src='/NowLive.svg'
+					src='/models/icon/iconRender.png'
 					height='20em'
 					width='20em'
 					alt='Now Live Icon'
