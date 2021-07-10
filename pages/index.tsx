@@ -10,7 +10,6 @@ export default function Home() {
 					name='description'
 					content='Website for the Now Live chrome extension'
 				/>
-				{/* <link rel='icon' href='/favicon.ico' /> */}
 			</Head>
 
 			<main className={styles.main}>
