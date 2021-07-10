@@ -13,22 +13,6 @@ export default function Auth({ clientId, redirectUrl }: AuthProps) {
 
 	return (
 		<div className={styles.twitchLogin}>
-			<p className={styles.info}>
-				<a
-					href={`https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&response_type=token&scope=${scope}&redirect_uri=${redirect_uri}`}
-					className={styles.authButton}
-				>
-					<i>
-						<Image
-							src='/images/TwitchGlitchPurple.svg'
-							height='25px'
-							width='25px'
-							alt='Twitch Icon'
-						/>
-					</i>
-					Authorize
-				</a>
-			</p>
 			<style jsx global>{`
 				body {
 					background: #23272a;
@@ -38,6 +22,20 @@ export default function Auth({ clientId, redirectUrl }: AuthProps) {
 					text-align: center;
 				}
 			`}</style>
+			<p className={styles.info}>
+				<a
+					href={`https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&response_type=token&scope=${scope}&redirect_uri=${redirect_uri}`}
+					className={styles.authButton}
+				>
+					<Image
+						src='/images/TwitchGlitchPurple.svg'
+						height='25px'
+						width='25px'
+						alt='Twitch Icon'
+					/>
+					Authorize
+				</a>
+			</p>
 		</div>
 	);
 }

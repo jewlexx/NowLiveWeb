@@ -10,6 +10,15 @@
 	font-size: xx-large;
 }
 
+.codeText {
+	user-select: all;
+	background-color: rgb(97, 97, 97);
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+}
+
 .authButton {
 	font-family: 'Roboto Mono', monospace;
 	border-style: solid;
