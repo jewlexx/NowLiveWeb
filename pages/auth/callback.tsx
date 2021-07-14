@@ -50,6 +50,7 @@ export default function AuthCallback({ redirectUrl }: AuthCallbackProps) {
 							paste{' '}
 							<i
 								className={styles.codeText}
+								id="NowLiveAuthTokenElement"
 								onClick={() => {
 									console.log('Yes');
 									navigator.clipboard.writeText(
