@@ -1,76 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import styles from '../../styles/Auth.module.scss';
-
-interface hashObject {
-	access_token: string;
-	scope: string;
-	token_type: 'bearer';
-}
 
 interface AuthCallbackProps {
 	redirectUrl: string;
 }
 
 export default function AuthCallback({ redirectUrl }: AuthCallbackProps) {
-	const [hash, setHash] = useState<hashObject | undefined>(undefined);
 	useEffect(() => {
-		if ((window.location.hash || undefined) === undefined) {
+		if (window.location.hash === undefined) {
 			document.title = 'Hash is null, redirecting...';
 			window.open(redirectUrl + '/auth', '_self');
 		}
-		const hash = window.location.hash.substr(1);
-
-		const result = hash.split('&').reduce((res: any, item) => {
-			var parts = item.split('=');
-			res[parts[0]] = parts[1];
-			return res;
-		}, {});
-
-		setHash(result);
 	}, [redirectUrl]);
 
 	return (
 		<div className={styles.container}>
 			<div className={styles.twitchLogin}>
-				{hash?.access_token === undefined ? (
-					<p>Loading hash from url...</p>
-				) : (
-					<>
-						<p>
-							Thank you for authorizing with Twitch! Copy and
-							paste{' '}
-							<i
-								className={styles.codeText}
-								id='NowLiveAuthTokenElement'
-								onClick={() => {
-									console.log('Yes');
-									navigator.clipboard.writeText(
-										hash.access_token
-									);
-
-									(
-										document.getElementById(
-											'copied'
-										) as HTMLElement
-									).style.opacity = '100';
-									setTimeout(() => {
-										(
-											document.getElementById(
-												'copied'
-											) as HTMLElement
-										).style.opacity = '0';
-									}, 2000);
-								}}
-							>
-								{hash.access_token}
-							</i>{' '}
-							into the <i>token</i> box to complete authorization
-						</p>
-						<small style={{ opacity: '0' }} id='copied'>
-							Copied to clipboard
-						</small>
-					</>
-				)}
+				<p>
+					Thank you for logging in. Open Now Live to start using it...
+				</p>
 			</div>
 		</div>
 	);
