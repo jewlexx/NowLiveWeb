@@ -16,7 +16,7 @@ export default function AuthCallback({ redirectUrl }: AuthCallbackProps) {
 	return (
 		<div className={styles.container}>
 			<div className={styles.twitchLogin}>
-				<p>
+				<p id='NowLiveAuthText'>
 					Thank you for logging in. Open Now Live to start using it...
 				</p>
 			</div>
