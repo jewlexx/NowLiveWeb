@@ -7,7 +7,7 @@ interface AuthCallbackProps {
 
 export default function AuthCallback({ redirectUrl }: AuthCallbackProps) {
 	useEffect(() => {
-		if (window.location.hash === undefined) {
+		if (window.location.hash === undefined || window.location.hash === '') {
 			document.title = 'Hash is null, redirecting...';
 			window.open(redirectUrl + '/auth', '_self');
 		}
