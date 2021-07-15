@@ -12,30 +12,23 @@ export default function Auth({ clientId, redirectUrl }: AuthProps) {
 	const redirect_uri = encodeURIComponent(redirectUrl + '/auth/callback');
 
 	return (
-		<div className={styles.twitchLogin}>
-			<style jsx global>{`
-				body {
-					background: #23272a;
-					color: #fff;
-					display: inline-block;
-					margin: 0px auto;
-					text-align: center;
-				}
-			`}</style>
-			<p className={styles.info}>
-				<a
-					href={`https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&response_type=token&scope=${scope}&redirect_uri=${redirect_uri}`}
-					className={styles.authButton}
-				>
-					<Image
-						src='/images/TwitchGlitchPurple.svg'
-						height='25px'
-						width='25px'
-						alt='Twitch Icon'
-					/>
-					Authorize
-				</a>
-			</p>
+		<div className={styles.container}>
+			<div className={styles.twitchLogin}>
+				<p className={styles.info}>
+					<a
+						href={`https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&response_type=token&scope=${scope}&redirect_uri=${redirect_uri}`}
+						className={styles.authButton}
+					>
+						<Image
+							src='/images/TwitchGlitchPurple.svg'
+							height='25px'
+							width='25px'
+							alt='Twitch Icon'
+						/>
+						Authorize
+					</a>
+				</p>
+			</div>
 		</div>
 	);
 }

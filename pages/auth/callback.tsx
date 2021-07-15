@@ -30,27 +30,18 @@ export default function AuthCallback({ redirectUrl }: AuthCallbackProps) {
 	}, [redirectUrl]);
 
 	return (
-		<div>
-			<style jsx global>{`
-				body {
-					background: #23272a;
-					color: #fff;
-					display: inline-block;
-					margin: 0px auto;
-					text-align: center;
-				}
-			`}</style>
-			<p>
+		<div className={styles.container}>
+			<div className={styles.twitchLogin}>
 				{hash?.access_token === undefined ? (
-					'Loading hash from url...'
+					<p>Loading hash from url...</p>
 				) : (
-					<div className={styles.twitchLogin}>
+					<>
 						<p>
 							Thank you for authorizing with Twitch! Copy and
 							paste{' '}
 							<i
 								className={styles.codeText}
-								id="NowLiveAuthTokenElement"
+								id='NowLiveAuthTokenElement'
 								onClick={() => {
 									console.log('Yes');
 									navigator.clipboard.writeText(
@@ -78,9 +69,9 @@ export default function AuthCallback({ redirectUrl }: AuthCallbackProps) {
 						<small style={{ opacity: '0' }} id='copied'>
 							Copied to clipboard
 						</small>
-					</div>
+					</>
 				)}
-			</p>
+			</div>
 		</div>
 	);
 }
