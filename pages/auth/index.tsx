@@ -7,16 +7,14 @@ interface AuthProps {
 }
 
 export default function Auth({ clientId, redirectUrl }: AuthProps) {
-	const client_id = encodeURIComponent(clientId);
-	const scope = encodeURIComponent('user:read:follows');
-	const redirect_uri = encodeURIComponent(redirectUrl + '/auth/callback');
-
 	return (
 		<div className={styles.container}>
 			<div className={styles.twitchLogin}>
 				<p className={styles.info}>
 					<a
-						href={`https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&response_type=token&scope=${scope}&redirect_uri=${redirect_uri}`}
+						href={encodeURI(
+							`https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&response_type=token&scope=user:read:follows&redirect_uri=${redirectUrl}/auth/callback`
+						)}
 						className={styles.authButton}
 					>
 						<Image
