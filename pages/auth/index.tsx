@@ -22,7 +22,7 @@ export default function Auth({ clientId, redirectUrl }: AuthProps) {
 							height='25px'
 							width='25px'
 							alt='Twitch Icon'
-						/>
+						/>{' '}
 						Authorize
 					</a>
 				</p>
