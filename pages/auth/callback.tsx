@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import styles from '../../styles/Auth.module.scss';
 
@@ -7,12 +8,14 @@ interface AuthCallbackProps {
 }
 
 export default function AuthCallback({ redirectUrl }: AuthCallbackProps) {
+  const router = useRouter();
+
   useEffect(() => {
     if (window.location.hash === undefined || window.location.hash === '') {
       document.title = 'Hash is null, redirecting...';
-      window.open(redirectUrl + '/auth', '_self');
+      router.push(redirectUrl + '/auth');
     }
-  }, [redirectUrl]);
+  }, [redirectUrl, router]);
 
   return (
     <div className={styles.container}>
