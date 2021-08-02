@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Coming Soon!</title>
+        <title>Coming Soon - Now Live</title>
         <meta
           name='description'
           content='Website for the Now Live chrome extension'
