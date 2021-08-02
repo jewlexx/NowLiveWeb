@@ -11,7 +11,6 @@ export default function Auth({ clientId, redirectUrl }: AuthProps) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Authorization - NowLive</title>
         <meta
           name='description'
           content='Auth page for Now Live chrome extension'
