@@ -21,7 +21,9 @@ export default function Home() {
         </p>
         <p>
           If you have installed NowLive, you might be looking for the{' '}
-          <Link href='/auth'>Auth Page</Link>
+          <Link href='/auth'>
+            <a className={styles.authLink}>Auth Page</a>
+          </Link>
         </p>
       </main>
 
