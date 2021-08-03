@@ -20,8 +20,7 @@ async function test() {
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
 
-  await page.goto('nowlive.jamesinaxx.me');
-  await page.fill('name=Search', 'Test');
+  await page.goto('https://nowlive.jamesinaxx.me');
   await page.screenshot({ path: './image.png' });
   browser.close();
 }
