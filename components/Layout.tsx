@@ -9,7 +9,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   function getTitle(): string {
     if (router.pathname === '/') return 'Now Live';
 
-    const path = _.startCase(router.pathname.split('-').join(' '));
+    const breadCrumbs = router.pathname
+      .substr(1)
+      .split('/')
+      .map(crumb => _.startCase(crumb.replace(/(-)/g, ' ')));
+
+    const path = breadCrumbs.join(' > ');
 
     return path + ' - Now Live';
   }
