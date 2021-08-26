@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
+import styles from '../styles/Layout.module.scss';
 
 interface PageProps {
   description?: string | undefined;
@@ -37,6 +39,24 @@ export default function Page({
         <meta name='description' content={description} />
       </Head>
       {children}
+      <footer className={styles.footer}>
+        <a
+          href='https://github.com/jamesinaxx'
+          target='_blank'
+          rel='noreferrer'
+        >
+          Developed by{' '}
+          <span className={styles.logo}>
+            <Image
+              src='https://static-cdn.jtvnw.net/jtv_user_pictures/d3d77af8-7ee9-454c-a912-5a67fa9063de-profile_image-70x70.png'
+              alt='jamesinaxx Logo'
+              title='jamesinaxx'
+              width={50}
+              height={50}
+            />
+          </span>
+        </a>
+      </footer>
     </div>
   );
 }
