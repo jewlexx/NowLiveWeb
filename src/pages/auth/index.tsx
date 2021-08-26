@@ -1,30 +1,23 @@
 import React from 'react';
 import Image from 'next/image';
-import Head from 'next/head';
 import styles from '../../styles/Auth.module.scss';
+import Page from '../../components/Page';
 
 interface AuthProps {
   clientId: string;
-  redirectUrl: string;
 }
 
-export default function Auth({
-  clientId,
-  redirectUrl,
-}: AuthProps): JSX.Element {
+export default function Auth({ clientId }: AuthProps): JSX.Element {
   return (
-    <div className={styles.container}>
-      <Head>
-        <meta
-          name='description'
-          content='Auth page for Now Live chrome extension'
-        />
-      </Head>
+    <Page
+      className={styles.container}
+      description='Auth page for Now Live chrome extension'
+    >
       <div className={styles.twitchLogin}>
         <p className={styles.info}>
           <a
             href={encodeURI(
-              `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&response_type=token&scope=user:read:follows&redirect_uri=${redirectUrl}/auth/callback`,
+              `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&response_type=token&scope=user:read:follows&redirect_uri=https://nowlive.jamesinaxx.me/auth/callback`,
             )}
             className={styles.authButton}
           >
@@ -38,7 +31,7 @@ export default function Auth({
           </a>
         </p>
       </div>
-    </div>
+    </Page>
   );
 }
 
@@ -46,7 +39,6 @@ export async function getStaticProps(): Promise<unknown> {
   return {
     props: {
       clientId: process.env.TWITCHCLIENT,
-      redirectUrl: process.env.REDIRECT_URL,
     },
   };
 }

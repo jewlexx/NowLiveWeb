@@ -1,13 +1,8 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
+import '../styles/globals.scss';
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
+  return <Component {...pageProps} />;
 }
 export default App;
