@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import _ from 'lodash';
 
 export default function Layout({
   children,
@@ -16,8 +15,12 @@ export default function Layout({
     const breadCrumbs = router.pathname
       .substr(1)
       .split('/')
-      .map(crumb => _.startCase(crumb.replace(/(-)/g, ' ')));
-
+      .map(crumb =>
+        crumb
+          .split('-')
+          .map(val => val.substr(0, 1).toUpperCase() + val.substr(1))
+          .join(' '),
+      );
     const path = breadCrumbs.join(' > ');
 
     return path + ' - Now Live';
