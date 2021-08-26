@@ -4,6 +4,10 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 
 export default function Home(): JSX.Element {
+  const unused = yuh => {
+    console.log(yuh);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
