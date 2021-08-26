@@ -9,10 +9,12 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next build && next export",
-    "fmt": "prettier . --write --ignore-path .gitignore"
+    "fmt": "prettier . --write --ignore-path .gitignore",
+    "precommit": "yarn lint && yarn fmt"
   },
   "dependencies": {
     "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.2",
     "lodash": "^4.17.21",
     "next": "11.1.0",
     "prettier": "^2.3.2",
