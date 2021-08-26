@@ -20,7 +20,7 @@ export default function Auth({ clientId, redirectUrl }: AuthProps) {
         <p className={styles.info}>
           <a
             href={encodeURI(
-              `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&response_type=token&scope=user:read:follows&redirect_uri=${redirectUrl}/auth/callback`
+              `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&response_type=token&scope=user:read:follows&redirect_uri=${redirectUrl}/auth/callback`,
             )}
             className={styles.authButton}
           >
