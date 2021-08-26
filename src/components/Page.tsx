@@ -2,11 +2,16 @@ import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-export default function Layout({
+interface PageProps {
+  description?: string | undefined;
+  className?: string | undefined;
+}
+
+export default function Page({
   children,
-}: {
-  children: React.ReactNode;
-}): JSX.Element {
+  className,
+  description,
+}: React.PropsWithChildren<PageProps>): JSX.Element {
   const router = useRouter();
 
   function getTitle(): string {
@@ -21,15 +26,15 @@ export default function Layout({
           .map(val => val.substr(0, 1).toUpperCase() + val.substr(1))
           .join(' '),
       );
-    const path = breadCrumbs.join(' > ');
 
-    return path + ' - Now Live';
+    return `${breadCrumbs.join(' > ')} - Now Live`;
   }
 
   return (
-    <div>
+    <div className={className}>
       <Head>
         <title>{getTitle()}</title>
+        <meta name='description' content={description} />
       </Head>
       {children}
     </div>
