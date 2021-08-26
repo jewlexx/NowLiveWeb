@@ -9,7 +9,7 @@
     "lint": "next lint",
     "export": "next build && next export",
     "fmt": "prettier . --write --ignore-path .gitignore",
-    "precommit": "yarn lint && yarn fmt"
+    "pre-commit": "yarn lint && yarn fmt"
   },
   "dependencies": {
     "next": "11.1.0",
@@ -28,5 +28,10 @@
     "prettier": "2.3.2",
     "sass": "1.38.1",
     "typescript": "4.3.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pre-commit"
+    }
   }
 }
