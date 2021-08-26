@@ -13,24 +13,24 @@
     "precommit": "yarn lint && yarn fmt"
   },
   "dependencies": {
-    "eslint-config-prettier": "^8.3.0",
-    "husky": "^7.0.2",
+    "eslint-config-prettier": "8.3.0",
+    "husky": "7.0.2",
     "lodash": "^4.17.21",
     "next": "11.1.0",
-    "prettier": "^2.3.2",
+    "prettier": "2.3.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.154",
-    "@types/lodash": "^4.14.172",
-    "@types/node": "^16.7.2",
-    "@types/react": "^17.0.19",
+    "@types/chrome": "0.0.154",
+    "@types/lodash": "4.14.172",
+    "@types/node": "16.7.2",
+    "@types/react": "17.0.19",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "playwright": "^1.14.1",
-    "sass": "^1.38.1",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.3.5"
+    "sass": "1.38.1",
+    "ts-node": "10.2.1",
+    "typescript": "4.3.5"
   }
 }
