@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import styles from '../../styles/Auth.module.scss';
@@ -7,7 +8,10 @@ interface AuthProps {
   redirectUrl: string;
 }
 
-export default function Auth({ clientId, redirectUrl }: AuthProps) {
+export default function Auth({
+  clientId,
+  redirectUrl,
+}: AuthProps): JSX.Element {
   return (
     <div className={styles.container}>
       <Head>
@@ -38,7 +42,7 @@ export default function Auth({ clientId, redirectUrl }: AuthProps) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(): Promise<unknown> {
   return {
     props: {
       clientId: process.env.TWITCHCLIENT,

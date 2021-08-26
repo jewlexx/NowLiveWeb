@@ -3,7 +3,11 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import _ from 'lodash';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}): JSX.Element {
   const router = useRouter();
 
   function getTitle(): string {
