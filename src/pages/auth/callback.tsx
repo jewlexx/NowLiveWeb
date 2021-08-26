@@ -1,13 +1,15 @@
+import React from 'react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 import styles from '../../styles/Auth.module.scss';
 
 interface AuthCallbackProps {
   redirectUrl: string;
 }
 
-export default function AuthCallback({ redirectUrl }: AuthCallbackProps) {
+export default function AuthCallback({
+  redirectUrl,
+}: AuthCallbackProps): JSX.Element {
   const router = useRouter();
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export default function AuthCallback({ redirectUrl }: AuthCallbackProps) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(): Promise<unknown> {
   return {
     props: {
       redirectUrl: process.env.REDIRECT_URL,
