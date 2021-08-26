@@ -320,7 +320,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^4.29.3":
+"@typescript-eslint/eslint-plugin@npm:4.29.3":
   version: 4.29.3
   resolution: "@typescript-eslint/eslint-plugin@npm:4.29.3"
   dependencies:
@@ -357,7 +357,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^4.20.0, @typescript-eslint/parser@npm:^4.29.3":
+"@typescript-eslint/parser@npm:4.29.3, @typescript-eslint/parser@npm:^4.20.0":
   version: 4.29.3
   resolution: "@typescript-eslint/parser@npm:4.29.3"
   dependencies:
@@ -3303,8 +3303,8 @@ __metadata:
   dependencies:
     "@types/node": ^16.7.2
     "@types/react": 17.0.19
-    "@typescript-eslint/eslint-plugin": ^4.29.3
-    "@typescript-eslint/parser": ^4.29.3
+    "@typescript-eslint/eslint-plugin": 4.29.3
+    "@typescript-eslint/parser": 4.29.3
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-next: 11.1.0
