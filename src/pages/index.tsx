@@ -1,14 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../styles/Home.module.scss';
 import Page from '../components/Page';
+import styles from '../styles/Home.module.scss';
 
 export default function Home(): JSX.Element {
   return (
-    <Page
-      // className={styles.container}
-      description='Website for the Now Live chrome extension'
-    >
+    <Page description='Website for the Now Live chrome extension'>
       <main className={styles.main}>
         <h1>Coming Soon!</h1>
         {/* This is so, if the extension is installed, we can change the text */}
@@ -19,7 +16,7 @@ export default function Home(): JSX.Element {
         <p>
           If you have installed NowLive, you might be looking for the{' '}
           <Link href='/auth'>
-            <a className={styles.authLink}>Auth Page</a>
+            <a className={styles.link}>Auth Page</a>
           </Link>
         </p>
       </main>
