@@ -16,7 +16,7 @@ export default function Home(): JSX.Element {
         <p>
           If you have installed NowLive, you might be looking for the{' '}
           <Link href='/auth'>
-            <a className={styles.authLink}>Auth Page</a>
+            <a className={styles.link}>Auth Page</a>
           </Link>
         </p>
       </main>

@@ -10,7 +10,7 @@ interface AuthProps {
 export default function Auth({ clientId }: AuthProps): JSX.Element {
   return (
     <Page description='Auth page for Now Live chrome extension'>
-      <div className={styles.twitchLogin}>
+      <main className={styles.main}>
         <p className={styles.info}>
           <a
             href={encodeURI(
@@ -24,10 +24,10 @@ export default function Auth({ clientId }: AuthProps): JSX.Element {
               width={25}
               alt='Twitch Icon'
             />{' '}
-            Authorize
+            Log In With Twitch
           </a>
         </p>
-      </div>
+      </main>
     </Page>
   );
 }
