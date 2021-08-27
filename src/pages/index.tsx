@@ -6,7 +6,7 @@ import Page from '../components/Page';
 export default function Home(): JSX.Element {
   return (
     <Page
-      className={styles.container}
+      // className={styles.container}
       description='Website for the Now Live chrome extension'
     >
       <main className={styles.main}>

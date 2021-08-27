@@ -33,7 +33,7 @@ export default function Page({
   }
 
   return (
-    <div className={className}>
+    <div className={styles.container}>
       <Head>
         <title>{getTitle()}</title>
         <meta name='description' content={description} />

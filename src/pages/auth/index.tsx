@@ -10,7 +10,7 @@ interface AuthProps {
 export default function Auth({ clientId }: AuthProps): JSX.Element {
   return (
     <Page
-      className={styles.container}
+      // className={styles.container}
       description='Auth page for Now Live chrome extension'
     >
       <div className={styles.twitchLogin}>
