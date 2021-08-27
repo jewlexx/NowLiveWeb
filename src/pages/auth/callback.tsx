@@ -10,28 +10,24 @@ export default function AuthCallback(): JSX.Element {
 
   useEffect(() => {
     if (window.location.hash === undefined || window.location.hash === '') {
-      // document.title = 'Hash is null, redirecting...';
-      // router.push('/auth');
       setHashNull(true);
     }
   }, [router]);
 
   return (
     <Page className={styles.container}>
-      <main className={styles.main}>
-        {!hashNull ? (
-          <h1 id='NowLiveAuthText'>
-            Thank you for logging in. Open Now Live to start using it...
-          </h1>
-        ) : (
-          <h1>
-            No Token was provided. Make sure you clicked the link from{' '}
-            <Link href='/auth'>
-              <a className={styles.link}>this page</a>
-            </Link>
-          </h1>
-        )}
-      </main>
+      {!hashNull ? (
+        <h1 id='NowLiveAuthText'>
+          Thank you for logging in. Open Now Live to start using it...
+        </h1>
+      ) : (
+        <h1>
+          No Token was provided. Make sure you clicked the link from{' '}
+          <Link href='/auth'>
+            <a className={styles.link}>this page</a>
+          </Link>
+        </h1>
+      )}
     </Page>
   );
 }
