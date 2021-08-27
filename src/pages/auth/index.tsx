@@ -9,9 +9,9 @@ interface AuthProps {
 
 export default function Auth({ clientId }: AuthProps): JSX.Element {
   return (
-    <div
-      className={styles.container}
-      // description='Auth page for Now Live chrome extension'
+    <Page
+      // className={styles.container}
+      description='Auth page for Now Live chrome extension'
     >
       <div className={styles.twitchLogin}>
         <p className={styles.info}>
@@ -31,7 +31,7 @@ export default function Auth({ clientId }: AuthProps): JSX.Element {
           </a>
         </p>
       </div>
-    </div>
+    </Page>
   );
 }
 
