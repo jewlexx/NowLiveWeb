@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import styles from '../../styles/Auth.module.scss';
 import Page from '../../components/Page';
-import Link from 'next/link';
 
 export default function AuthCallback(): JSX.Element {
   const router = useRouter();
