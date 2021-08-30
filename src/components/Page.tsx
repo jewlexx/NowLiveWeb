@@ -11,7 +11,6 @@ interface PageProps {
 
 export default function Page({
   children,
-  className,
   description,
 }: React.PropsWithChildren<PageProps>): JSX.Element {
   const router = useRouter();
@@ -38,27 +37,25 @@ export default function Page({
         <title>{getTitle()}</title>
         <meta name='description' content={description} />
       </Head>
-      <main className={styles.main}>
-        {children}
-        <footer className={styles.footer}>
-          <a
-            href='https://github.com/jamesinaxx'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Developed by{' '}
-            <span className={styles.logo}>
-              <Image
-                src='https://static-cdn.jtvnw.net/jtv_user_pictures/d3d77af8-7ee9-454c-a912-5a67fa9063de-profile_image-70x70.png'
-                alt='jamesinaxx Logo'
-                title='jamesinaxx'
-                width={50}
-                height={50}
-              />
-            </span>
-          </a>
-        </footer>
-      </main>
+      <main className={styles.main}>{children}</main>
+      <footer className={styles.footer}>
+        <a
+          href='https://github.com/jamesinaxx'
+          target='_blank'
+          rel='noreferrer'
+        >
+          Developed by{' '}
+          <span className={styles.logo}>
+            <Image
+              src='https://static-cdn.jtvnw.net/jtv_user_pictures/d3d77af8-7ee9-454c-a912-5a67fa9063de-profile_image-70x70.png'
+              alt='jamesinaxx Logo'
+              title='jamesinaxx'
+              width={50}
+              height={50}
+            />
+          </span>
+        </a>
+      </footer>
     </div>
   );
 }
