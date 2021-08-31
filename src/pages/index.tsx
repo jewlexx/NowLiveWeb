@@ -11,7 +11,14 @@ export default function Home(): JSX.Element {
         {/* This is so, if the extension is installed, we can change the text */}
         <p id='NowLiveExtensionInstalledOrNotText'>
           In the meantime, you can install the extension from{' '}
-          <a href='#'>here (not yet released)</a>
+          <a
+            className={styles.link}
+            href='https://chrome.google.com/webstore/detail/now-live/fonhghodpbmhkkccljcjkpjjooehflpk'
+            target='_blank'
+            rel='noreferrer'
+          >
+            here
+          </a>
         </p>
         <p>
           If you have installed NowLive, you might be looking for the{' '}
