@@ -11,7 +11,6 @@ interface PageProps {
 
 export default function Page({
   children,
-  className,
   description,
 }: React.PropsWithChildren<PageProps>): JSX.Element {
   const router = useRouter();
@@ -38,7 +37,7 @@ export default function Page({
         <title>{getTitle()}</title>
         <meta name='description' content={description} />
       </Head>
-      {children}
+      <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
         <a
           href='https://github.com/jamesinaxx'
