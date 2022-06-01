@@ -1,9 +1,10 @@
 {
-  "author": "You <you@example.com>",
   "name": "yew-app",
   "version": "0.1.0",
+  "author": "You <you@example.com>",
   "scripts": {
     "build": "cross-env WASM_PACK_PROFILE=release parcel build static/index.html --public-url ./",
+    "prepare": "cargo check",
     "start": "cross-env WASM_PACK_PROFILE=dev parcel static/index.html -p 8000 --open",
     "test": "wasm-pack test --headless --chrome"
   },
