@@ -1,12 +1,12 @@
 [package]
-authors = ["You <you@example.com>"]
+authors = ["Juliette Cordor"]
 categories = ["wasm"]
-description = "My awesome Yew app."
+description = "The website for NowLive"
 edition = "2018"
 license = "Apache-2.0/MIT"
-name = "yew-app"
+name = "NowLiveWeb"
 readme = "./README.md"
-repository = "https://github.com/jetli/create-yew-app.git"
+repository = "https://github.com/jewlexx/NowLiveWeb"
 version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -16,11 +16,7 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 log = "0.4"
-serde = "1"
-reqwest = { version = "0.11", features = ["json"] }
 yew = "0.19.3"
-yew-router = "0.16.0"
-yew-hooks = "0.1.56"
 wasm-bindgen = "0.2"
 wasm-logger = "0.2.0"
 wee_alloc = "0.4.5"
@@ -36,3 +32,7 @@ features = [
   "Element",
   "HtmlCollection",
 ]
+
+[profile.release]
+lto = true
+opt-level = "s"
