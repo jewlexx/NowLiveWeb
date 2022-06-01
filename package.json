@@ -1,7 +1,6 @@
 {
-  "name": "yew-app",
+  "name": "nowliveweb",
   "version": "0.1.0",
-  "author": "You <you@example.com>",
   "scripts": {
     "build": "cross-env WASM_PACK_PROFILE=release parcel build static/index.html --public-url ./",
     "prepare": "cargo check",
