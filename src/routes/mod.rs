@@ -1,17 +1,17 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-pub mod about;
+pub mod auth;
 pub mod home;
 
-use about::About;
+use auth::Auth;
 use home::Home;
 
 /// App routes
 #[derive(Routable, Debug, Clone, PartialEq)]
 pub enum AppRoute {
-    #[at("/about")]
-    About,
+    #[at("/auth")]
+    Auth,
     #[not_found]
     #[at("/page-not-found")]
     PageNotFound,
@@ -23,7 +23,7 @@ pub enum AppRoute {
 pub fn switch(routes: &AppRoute) -> Html {
     match routes.clone() {
         AppRoute::Home => html! { <Home /> },
-        AppRoute::About => html! { <About /> },
+        AppRoute::Auth => html! { <Auth /> },
         AppRoute::PageNotFound => html! { "Page not found" },
     }
 }

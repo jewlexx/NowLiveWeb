@@ -10,7 +10,7 @@ pub fn nav() -> Html {
         <nav>
             <ul>
                 <li><Link<AppRoute> to={AppRoute::Home} classes="app-link" >{ "Home" }</Link<AppRoute>></li>
-                <li><Link<AppRoute> to={AppRoute::About} classes="app-link">{ "About" }</Link<AppRoute>></li>
+                <li><Link<AppRoute> to={AppRoute::Auth} classes="app-link">{ "Auth" }</Link<AppRoute>></li>
             </ul>
         </nav>
     }
