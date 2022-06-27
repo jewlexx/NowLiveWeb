@@ -15,7 +15,7 @@ export default function AuthCallback(): JSX.Element {
   }, [router]);
 
   return (
-    <Page className={styles.container}>
+    <Page>
       {!hashNull ? (
         <h1 id='NowLiveAuthText'>
           Thank you for logging in. Open Now Live to start using it...
