@@ -39,7 +39,7 @@ export default function Page({
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
         <a
-          href='https://github.com/jamesinaxx'
+          href='https://github.com/jewelexx'
           target='_blank'
           rel='noreferrer'
         >
@@ -47,8 +47,8 @@ export default function Page({
           <span className={styles.logo}>
             <Image
               src='https://static-cdn.jtvnw.net/jtv_user_pictures/d3d77af8-7ee9-454c-a912-5a67fa9063de-profile_image-70x70.png'
-              alt='jamesinaxx Logo'
-              title='jamesinaxx'
+              alt='jewelexx Logo'
+              title='jewelexx'
               width={50}
               height={50}
             />

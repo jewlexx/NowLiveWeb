@@ -13,7 +13,7 @@ export default function Auth({ clientId }: AuthProps): JSX.Element {
       <p className={styles.info}>
         <a
           href={encodeURI(
-            `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&response_type=token&scope=user:read:follows&redirect_uri=https://nowlive.jamesinaxx.me/auth/callback`,
+            `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&response_type=token&scope=user:read:follows&redirect_uri=https://nowlive.jewelexx.com/auth/callback`,
           )}
           className={styles.authButton}
         >
