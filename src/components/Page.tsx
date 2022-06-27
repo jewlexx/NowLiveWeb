@@ -38,11 +38,7 @@ export default function Page({
       </Head>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
-        <a
-          href='https://github.com/jewelexx'
-          target='_blank'
-          rel='noreferrer'
-        >
+        <a href='https://github.com/jewelexx' target='_blank' rel='noreferrer'>
           Developed by{' '}
           <span className={styles.logo}>
             <Image
