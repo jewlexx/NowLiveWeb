@@ -6,7 +6,6 @@ import styles from '../styles/Layout.module.scss';
 
 interface PageProps {
   description?: string | undefined;
-  className?: string | undefined;
 }
 
 export default function Page({
