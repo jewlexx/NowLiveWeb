@@ -9,12 +9,8 @@
     "fmt": "prettier . --write --ignore-path .gitignore",
     "lint": "next lint",
     "pre-commit": "yarn fmt && yarn lint",
+    "prepare": "husky install",
     "start": "next start"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn pre-commit"
-    }
   },
   "dependencies": {
     "next": "12.1.6",
