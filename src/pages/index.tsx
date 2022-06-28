@@ -8,17 +8,14 @@ export default function Home(): JSX.Element {
   return (
     <Page description='Website for the Now Live chrome extension'>
       <span>
-        <a
-          className={styles.link}
-          href='https://addons.mozilla.org/firefox/downloads/file/3968448/2dbb80bb3bfd4d999aad-1.1.1.xpi'
-        >
+        <Link className={styles.link} href='/api/install'>
           <Image
             src='https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png'
             alt='install for firefox'
             width={183}
             height={64}
           />
-        </a>
+        </Link>
         <a
           className={styles.link}
           href='https://chrome.google.com/webstore/detail/now-live/fonhghodpbmhkkccljcjkpjjooehflpk'
