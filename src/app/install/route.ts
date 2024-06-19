@@ -3,22 +3,28 @@ import UAParser from 'ua-parser-js';
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request): Promise<Response> {
-  const userAgentString = request.headers.get('user-agent');
+  let browser = new URL(request.url).searchParams.get('browser');
 
-  if (!userAgentString) {
-    return new Response(JSON.stringify({ error: 'User agent is required' }), {
-      status: 400,
-    });
+  if (browser === null) {
+    const userAgentString = request.headers.get('user-agent');
+
+    if (!userAgentString) {
+      return new Response(JSON.stringify({ error: 'User agent is required' }), {
+        status: 400,
+      });
+    }
+
+    const userAgent = UAParser(userAgentString);
+
+    browser = userAgent.browser.name || null;
   }
 
-  const userAgent = UAParser(userAgentString);
-
-  if (userAgent.browser.name === 'Firefox') {
+  if (browser === 'Firefox') {
     return Response.redirect(
       'https://addons.mozilla.org/firefox/downloads/file/3968448/2dbb80bb3bfd4d999aad-1.1.1.xpi',
       302,
     );
-  } else if (userAgent.browser.name === 'Chrome') {
+  } else if (browser === 'Chrome') {
     return Response.redirect(
       'https://chrome.google.com/webstore/detail/now-live/fonhghodpbmhkkccljcjkpjjooehflpk',
 
