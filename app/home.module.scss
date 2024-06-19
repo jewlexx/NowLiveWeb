@@ -1,5 +1,11 @@
 @use './include.scss';
 
+// $firefoxColour: #ff5630;
+// $chromeColour: #4c8bbd;
+
+$firefoxColour: #b1391e;
+$chromeColour: darken(#4c8bbd, 25%);
+
 .link {
   @include include.link();
 }
@@ -28,22 +34,22 @@
 @keyframes glow_firefox {
   0%,
   100% {
-    background-color: #ff5630;
+    background-color: $firefoxColour;
   }
 
   50% {
-    background-color: lighten(#ff5630, 10%);
+    background-color: lighten($firefoxColour, 10%);
   }
 }
 
 @keyframes glow_chrome {
   0%,
   100% {
-    background-color: #4c8bbd;
+    background-color: $chromeColour;
   }
 
   50% {
-    background-color: lighten(#4c8bbd, 10%);
+    background-color: lighten($chromeColour, 10%);
   }
 }
 
@@ -61,12 +67,12 @@
   padding: 1rem;
 
   &:nth-of-type(1) {
-    background-color: #ff5630;
+    background-color: $firefoxColour;
     animation: glow_firefox 2s ease-in-out infinite;
   }
 
   &:nth-of-type(2) {
-    background-color: #4c8bbd;
+    background-color: $chromeColour;
 
     animation: glow_chrome 2s ease-in-out infinite;
   }
@@ -90,11 +96,11 @@
     transform: scale(1.1);
 
     &:nth-of-type(1) {
-      background-color: lighten(#ff5630, 10%);
+      background-color: lighten($firefoxColour, 10%);
     }
 
     &:nth-of-type(2) {
-      background-color: lighten(#4c8bbd, 10%);
+      background-color: lighten($chromeColour, 10%);
     }
 
     .downloadIcon {
