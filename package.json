@@ -7,8 +7,9 @@
     "dev": "next dev",
     "export": "next build && next export",
     "fmt": "prettier . --write --ignore-path .gitignore",
+    "fmt:check": "prettier . --check --ignore-path .gitignore",
     "lint": "next lint",
-    "pre-commit": "bun run fmt && bun run lint",
+    "pre-commit": "bun run fmt:check && bun run lint",
     "prepare": "husky install",
     "start": "next start"
   },
