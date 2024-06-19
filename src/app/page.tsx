@@ -18,7 +18,7 @@ export default function Home(): JSX.Element {
         />
       </head>
       <span>
-        <Link className={styles.link} href='/api/install'>
+        <Link className={styles.link} href='/api/install' legacyBehavior>
           <Image
             src='https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png'
             alt='install for firefox'
@@ -42,8 +42,8 @@ export default function Home(): JSX.Element {
       </span>
       <p>
         If you have installed NowLive, you might be looking for the{' '}
-        <Link href='/auth'>
-          <a className={styles.link}>Auth Page</a>
+        <Link href='/auth' className={styles.link}>
+          Auth Page
         </Link>
       </p>
     </main>

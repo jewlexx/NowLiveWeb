@@ -23,8 +23,8 @@ export default function AuthCallback(): JSX.Element {
       ) : (
         <h1>
           No Token was provided. Make sure you clicked the link from{' '}
-          <Link href='/auth'>
-            <a className={styles.link}>this page</a>
+          <Link href='/auth' className={styles.link}>
+            this page
           </Link>
         </h1>
       )}
