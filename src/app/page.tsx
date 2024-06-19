@@ -1,8 +1,7 @@
 import { type Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import Page from '../components/Page';
-import styles from '../styles/Home.module.scss';
+import styles from './home.module.scss';
 
 export const metadata: Metadata = {
   title: 'Now Live',

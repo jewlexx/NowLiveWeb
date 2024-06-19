@@ -1,7 +1,7 @@
 import { type Metadata } from 'next';
 import Image from 'next/image';
 import styles from './layout.module.scss';
-import '../styles/globals.scss';
+import './globals.scss';
 
 export const metadata: Metadata = {
   title: {
