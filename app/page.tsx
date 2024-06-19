@@ -12,7 +12,12 @@ export default function Home(): JSX.Element {
   return (
     <>
       <span>
-        <Link className={styles.link} href='/api/install' legacyBehavior>
+        <Link
+          className={styles.link}
+          href='/install?browser=Firefox'
+          target='_blank'
+          rel='noreferrer'
+        >
           <Image
             src='https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png'
             alt='install for firefox'
@@ -20,9 +25,9 @@ export default function Home(): JSX.Element {
             height={64}
           />
         </Link>
-        <a
+        <Link
           className={styles.link}
-          href='https://chrome.google.com/webstore/detail/now-live/fonhghodpbmhkkccljcjkpjjooehflpk'
+          href='/install?browser=Chrome'
           target='_blank'
           rel='noreferrer'
         >
@@ -32,7 +37,7 @@ export default function Home(): JSX.Element {
             width={228}
             height={64}
           />
-        </a>
+        </Link>
       </span>
       <p>
         If you have installed NowLive, you might be looking for the{' '}
