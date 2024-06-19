@@ -1,5 +1,6 @@
 import { type Metadata } from 'next';
 import Image from 'next/image';
+import { IconBrandTwitch } from '@tabler/icons-react';
 import styles from '../../styles/Auth.module.scss';
 
 export const metadata: Metadata = {
@@ -16,13 +17,7 @@ export default function Auth() {
         )}
         className={styles.authButton}
       >
-        <Image
-          src='/images/TwitchGlitchPurple.svg'
-          height={25}
-          width={25}
-          alt='Twitch Icon'
-        />{' '}
-        Log In With Twitch
+        <IconBrandTwitch /> Sign In With Twitch
       </a>
     </p>
   );
