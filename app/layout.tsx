@@ -54,6 +54,10 @@ export default function RootLayout({
               />
             </span>
           </a>
+          <small>
+            *Currently only supports Twitch... and I have no plans to support
+            YouTube
+          </small>
         </footer>
       </body>
     </html>

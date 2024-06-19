@@ -83,6 +83,21 @@
   }
 }
 
+.rainbow {
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  background-clip: text;
+  color: transparent;
+}
+
 .title {
   a {
     color: #0070f3;

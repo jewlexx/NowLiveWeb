@@ -16,6 +16,12 @@ export const metadata: Metadata = {
 export default function Home(): JSX.Element {
   return (
     <>
+      <h1 className={styles.rainbow}>Welcome to Now Live</h1>
+      <small>
+        The quick and easy way to check which of your favorite streamers are
+        live*
+      </small>
+
       <span>
         <Link
           className={styles.linkbutton}
