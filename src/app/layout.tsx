@@ -1,7 +1,15 @@
+import { type Metadata } from 'next';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { useMemo } from 'react';
 import styles from './layout.module.scss';
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s > Now Live',
+    default: 'Now Live',
+  },
+};
 
 export default function RootLayout({
   children,
