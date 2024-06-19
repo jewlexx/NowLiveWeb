@@ -1,5 +1,4 @@
 import { type Metadata } from 'next';
-import Image from 'next/image';
 import { IconBrandTwitch } from '@tabler/icons-react';
 import styles from './auth.module.scss';
 

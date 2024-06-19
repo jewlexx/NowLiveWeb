@@ -17,7 +17,8 @@ export default function AuthCallback(): JSX.Element {
     <>
       {!hashNull ? (
         <h1 id='NowLiveAuthText'>
-          Thank you for logging in. Open Now Live to start using it...
+          Thank you for logging in. Open Now Live with this page up to start
+          using it...
         </h1>
       ) : (
         <h1>

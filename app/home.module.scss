@@ -25,6 +25,28 @@
   }
 }
 
+@keyframes glow_firefox {
+  0%,
+  100% {
+    background-color: #ff5630;
+  }
+
+  50% {
+    background-color: lighten(#ff5630, 10%);
+  }
+}
+
+@keyframes glow_chrome {
+  0%,
+  100% {
+    background-color: #4c8bbd;
+  }
+
+  50% {
+    background-color: lighten(#4c8bbd, 10%);
+  }
+}
+
 .linkbutton {
   font-family: 'Roboto Mono', monospace;
   font-size: xx-large;
@@ -40,10 +62,13 @@
 
   &:nth-of-type(1) {
     background-color: #ff5630;
+    animation: glow_firefox 2s ease-in-out infinite;
   }
 
   &:nth-of-type(2) {
     background-color: #4c8bbd;
+
+    animation: glow_chrome 2s ease-in-out infinite;
   }
 
   svg {
