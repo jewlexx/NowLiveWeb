@@ -1,21 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import styles from '../../styles/Auth.module.scss';
-import Page from '../../components/Page';
+import styles from '../auth.module.scss';
 
 export default function AuthCallback(): JSX.Element {
-  const router = useRouter();
   const [hashNull, setHashNull] = useState(false);
 
   useEffect(() => {
-    if (window.location.hash === undefined || window.location.hash === '') {
-      setHashNull(true);
-    }
-  }, [router]);
+    setHashNull(
+      window.location.hash === undefined || window.location.hash === '',
+    );
+  }, []);
 
   return (
-    <Page>
+    <>
       {!hashNull ? (
         <h1 id='NowLiveAuthText'>
           Thank you for logging in. Open Now Live to start using it...
@@ -28,6 +27,6 @@ export default function AuthCallback(): JSX.Element {
           </Link>
         </h1>
       )}
-    </Page>
+    </>
   );
 }

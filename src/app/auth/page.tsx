@@ -1,7 +1,7 @@
 import { type Metadata } from 'next';
 import Image from 'next/image';
 import { IconBrandTwitch } from '@tabler/icons-react';
-import styles from '../../styles/Auth.module.scss';
+import styles from './auth.module.scss';
 
 export const metadata: Metadata = {
   title: 'Auth',
