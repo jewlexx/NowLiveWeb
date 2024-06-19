@@ -16,7 +16,9 @@ export const metadata: Metadata = {
 export default function Home(): JSX.Element {
   return (
     <>
-      <h1 className={styles.rainbow}>Welcome to Now Live</h1>
+      <h1 className={`${styles.rainbow} ${styles.header}`}>
+        Welcome to Now Live
+      </h1>
       <small>
         The quick and easy way to check which of your favorite streamers are
         live*
@@ -54,7 +56,7 @@ export default function Home(): JSX.Element {
           <IconDownload className={styles.downloadIcon} />
         </Link>
       </span>
-      <p>
+      <p className={styles.alreadyInstalled}>
         If you have installed NowLive, you might be looking for the{' '}
         <Link href='/auth' className={styles.link}>
           Auth Page
