@@ -4,20 +4,103 @@
   @include include.link();
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.linkbutton {
+  font-family: 'Roboto Mono', monospace;
+  font-size: xx-large;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 1rem;
+
+  transition: all 60ms ease-in-out;
+  padding: 1rem;
+
+  &:nth-of-type(1) {
+    background-color: #ff5630;
+  }
+
+  &:nth-of-type(2) {
+    background-color: #4c8bbd;
+  }
+
+  svg {
+    transform: scale(1.5);
+    margin-left: 0.25em;
+  }
+
+  span {
+    margin: 0rem 1rem;
+  }
+
+  .downloadIcon {
+    margin-left: auto;
+    transition: all 400ms ease-in-out;
+    transform: scale(1) rotate(0deg);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+
+    &:nth-of-type(1) {
+      background-color: lighten(#ff5630, 10%);
+    }
+
+    &:nth-of-type(2) {
+      background-color: lighten(#4c8bbd, 10%);
+    }
+
+    .downloadIcon {
+      animation: bounce 1s ease-in-out infinite;
+    }
+  }
+
+  &::active {
+    background-color: #4b169c;
+    color: white;
+  }
+}
+
 .title {
   a {
     color: #0070f3;
     text-decoration: none;
+
     &:hover {
       text-decoration: underline;
     }
+
     &:focus {
       text-decoration: underline;
     }
+
     &:active {
       text-decoration: underline;
     }
   }
+
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
@@ -67,22 +150,27 @@
     color 0.15s ease,
     border-color 0.15s ease;
   width: 45%;
+
   &:hover {
     color: #0070f3;
     border-color: #0070f3;
   }
+
   &:focus {
     color: #0070f3;
     border-color: #0070f3;
   }
+
   &:active {
     color: #0070f3;
     border-color: #0070f3;
   }
+
   h2 {
     margin: 0 0 1rem 0;
     font-size: 1.5rem;
   }
+
   p {
     margin: 0;
     font-size: 1.25rem;
